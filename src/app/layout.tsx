@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Geist, Geist_Mono, Roboto } from "next/font/google"; // Import Roboto dari next/font/google
+import "./globals.scss"; // Gunakan file global SCSS (tanpa "module")
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -9,6 +9,12 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto", // Tambahkan custom variable untuk Roboto
+  weight: ["400", "700"], // Gunakan variasi berat yang diinginkan
   subsets: ["latin"],
 });
 
@@ -24,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable}`}
+      >
         {children}
       </body>
     </html>

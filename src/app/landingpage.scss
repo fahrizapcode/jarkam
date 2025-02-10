@@ -1,0 +1,73 @@
+.nav-landing-page {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 26;
+  align-items: center;
+  height: 80;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+}
+
+.landing-page-top {
+  display: flex;
+  justify-content: space-between;
+  width: 105vw;
+  height: 1000px;
+  top: -180px;
+  left: -1vw;
+  padding-inline-end: 5vw;
+  padding-inline-start: 5vw;
+  position: relative;
+  background-color: #dcf2ff;
+  padding-top: 280px;
+  border-bottom-left-radius: 1000px;
+  .title {
+    width: 48vw;
+    padding-top: 100px;
+    h1 {
+      font-size: 64px;
+      font-weight: 500;
+      color: #003360;
+    }
+    p {
+      font-size: 28px;
+      color: #003360;
+      margin-top: 30px;
+      font-weight: 400;
+    }
+  }
+  .image {
+    width: 570px;
+    height: 570px;
+    background-color: #7fceff;
+    overflow: hidden;
+    border-radius: 50%;
+    img {
+      width: 570px;
+      height: 570px;
+    }
+  }
+}
+
+.searching-part {
+  display: flex;
+  top: 20px; /* Jarak dari atas saat sticky */
+
+  position: -webkit-sticky; /* Untuk browser lama */
+  z-index: 10;
+
+  position: fixed;
+  width: 100vw;
+  justify-content: center;
+  input {
+    width: 50vw;
+  }
+  input {
+    background-color: #fff;
+  }
+}
+
+.content {
+  width: 4999px;
+}
