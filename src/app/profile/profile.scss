@@ -1,0 +1,280 @@
+@use "../variables" as *;
+.profile-page-container {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  padding-top: 0.3vw;
+  height: 100%;
+  .profile-page {
+    display: flex;
+    width: 99%;
+    column-gap: 4vw;
+    * {
+      // border: 1px solid black;
+    }
+    .sidebar {
+      background-color: $light-blue;
+      display: flex;
+      border-radius: 6px;
+      padding: 1%;
+      padding-top: 28px;
+      flex: 1.6;
+      flex-direction: column;
+      row-gap: 8px;
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 14px;
+        margin-bottom: 16px;
+        img {
+          width: 100px;
+          height: 100px;
+          background-color: rgb(219, 219, 219);
+          border-radius: 50px;
+          cursor: pointer;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+      .button-container {
+        // border: 1px solid black;
+        width: 100%;
+        .button {
+          display: flex;
+          justify-content: start;
+          width: 100%;
+          height: 40px;
+          align-items: center;
+          font-size: 17px;
+          margin-top: 10px;
+          border-radius: 6px;
+          border: none;
+          color: $dark-blue-set;
+          font-weight: 500;
+          // background-color: $blue-set;
+          padding-inline-start: 12px;
+          img {
+            width: 18px;
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+    form {
+      // padding: 1.6%;
+      padding-top: 20px;
+      flex: 6;
+      height: 716px;
+
+      .field {
+        display: flex;
+        width: 98%;
+        flex-direction: column;
+        label {
+          margin-top: 16px;
+          color: $dark-blue-set;
+          font-weight: 600;
+          cursor: pointer;
+          img {
+            width: 12px;
+            margin-left: 4px;
+          }
+        }
+        input {
+          background-color: rgb(230, 230, 230);
+          height: 34px;
+          border-radius: 3px;
+          border: none;
+          margin-top: 4px;
+          padding-inline: 10px;
+          &::placeholder {
+            font-size: 14px;
+            color: black;
+          }
+        }
+      }
+      .save-button {
+        width: 98%;
+        // margin-right: 4%;
+        display: flex;
+        justify-content: end;
+        margin-top: 16px;
+
+        button {
+          background-color: $dark-blue-set-2;
+          color: $white-set;
+          border-radius: 4px;
+          font-size: 16px;
+          border: none;
+          width: 100px;
+          height: 34px;
+          transition: 0.3s;
+          &:active {
+            opacity: 30%;
+          }
+        }
+      }
+    }
+    .participation-page {
+      padding-top: 20px;
+      height: 718px;
+      flex: 6;
+    }
+    .account-page {
+      // padding-top: 20px;
+      flex: 6;
+      height: 718px;
+    }
+    .blank-page {
+      flex: 6;
+      height: 718px;
+    }
+  }
+}
+
+@media (max-width: 1210px) {
+  .profile-page-container {
+    .profile-page {
+      * {
+      }
+      .sidebar {
+        flex: 3;
+
+        .profile {
+          img {
+          }
+          p {
+          }
+        }
+        .button-container {
+          button {
+            img {
+            }
+          }
+        }
+      }
+      form {
+        .field {
+          label {
+          }
+          input {
+          }
+        }
+      }
+      .participation-page {
+        height: 1100px;
+      }
+    }
+  }
+}
+@media (max-width: 950px) {
+  .profile-page-container {
+    .profile-page {
+      * {
+      }
+      .sidebar {
+        flex: 3;
+
+        .profile {
+          img {
+          }
+          p {
+          }
+        }
+        .button-container {
+          button {
+            img {
+            }
+          }
+        }
+      }
+      form {
+        .field {
+          label {
+          }
+          input {
+          }
+        }
+      }
+      .participation-page {
+      }
+    }
+  }
+}
+@media (max-width: 750px) {
+  .profile-page-container {
+    padding-inline: 4vw;
+    * {
+      // border: 1px solid black;
+    }
+    .profile-page {
+      flex-direction: column;
+      .sidebar {
+        border-radius: 0px;
+        align-items: center;
+        // padding-top: 0px;
+        flex: 0 1 auto;
+        background-color: $white-set;
+        height: 70px;
+        flex-direction: row;
+        justify-content: space-between;
+        .profile {
+          flex-direction: row;
+          margin-bottom: 0px;
+          img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+        .button-container {
+          border: 1px solid $dark-blue-set;
+          border-radius: 5px;
+          padding-inline: 2px;
+          display: flex;
+          width: 40vw;
+          height: 40px;
+          align-items: center;
+          column-gap: 3vw;
+          justify-content: space-between;
+          .button {
+            margin-top: 0px;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+              display: none;
+            }
+            img {
+            }
+          }
+        }
+      }
+      form {
+        .field {
+          label {
+          }
+          input {
+            // width: 98%;
+          }
+        }
+      }
+      .participation-page {
+        flex: 0 1 auto;
+      }
+      .account-page {
+        flex: 0 1 auto;
+      }
+      .blank-page {
+        flex: 0 1 auto;
+      }
+    }
+  }
+}

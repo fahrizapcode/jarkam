@@ -1,0 +1,149 @@
+@use "./../variables" as *;
+.register-page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  * {
+    // border: 1px solid black;
+  }
+  .register-illustration-container {
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    justify-content: end;
+    align-items: center;
+    .logo {
+      width: 300px;
+    }
+    .illustration {
+      margin-top: 40px;
+      width: 710px;
+    }
+  }
+  .register-form-background {
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    flex: 5;
+    .register-form-container {
+      border-radius: 10px;
+      width: 430px;
+      height: 70vh;
+      border: 1px solid $dark-blue-set-2;
+      background-color: $light-blue;
+      form {
+        padding-inline: 40px;
+        padding-top: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title-form {
+          font-size: 26px;
+          margin-bottom: 14px;
+          color: $dark-blue-set;
+          font-weight: 500;
+        }
+        .field-container {
+          // border: 1px solid black;
+          height: 336px;
+          width: 100%;
+          .field {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            label {
+              color: $dark-blue-set;
+              font-weight: 600;
+              margin-top: 18px;
+              margin-left: 4px;
+            }
+            input {
+              margin-top: 4px;
+              padding-inline: 10px;
+              font-size: 14px;
+              height: 36px;
+              border: none;
+              border-radius: 8px;
+            }
+          }
+        }
+        .flow-container {
+          //   border: 1px solid black;
+          width: 42px;
+          display: flex;
+          align-items: center;
+
+          justify-content: space-between;
+          height: 14px;
+          margin-bottom: 12px;
+          div {
+            border-radius: 8px;
+            width: 12px;
+            border: 1px solid $dark-blue-set;
+            height: 12px;
+            background-color: white;
+          }
+        }
+        .button-container {
+          width: 100%;
+          display: flex;
+          column-gap: 10px;
+          .button {
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            font-size: 17px;
+            background-color: $dark-blue-set-2;
+            color: white;
+            border: none;
+            transition: 0.2s;
+            flex: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+
+            div {
+              width: 18px;
+              height: 18px;
+              margin-top: 3px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              justify-content: center;
+              border-radius: 11px;
+              background-color: white;
+              img {
+                rotate: 180deg;
+                width: 16px;
+              }
+            }
+            &:active {
+              opacity: 30%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .register-page {
+    * {
+      // border: 1px solid black;
+    }
+    .register-illustration-container {
+      display: none;
+
+      .logo {
+      }
+      .illustration {
+      }
+    }
+    .register-form-background {
+      .register-form-container {
+        width: 400px;
+      }
+    }
+  }
+}

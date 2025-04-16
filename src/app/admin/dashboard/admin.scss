@@ -1,0 +1,489 @@
+@use "../../variables" as *;
+.admin-page-container {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  padding-top: 0.3vw;
+  height: 100%;
+  .admin-page {
+    display: flex;
+    width: 99%;
+    column-gap: 4vw;
+    * {
+      //   border: 1px solid black;
+    }
+
+    .sidebar {
+      background-color: $light-blue;
+      display: flex;
+      border-radius: 6px;
+      padding: 10px;
+      padding-top: 28px;
+      flex: 1.6;
+      min-width: 260px;
+      // min-width: 400px;
+      height: 100%;
+      flex-direction: column;
+      row-gap: 8px;
+      align-items: center;
+      .logo-jrm {
+        width: 190px;
+        margin-bottom: 40px;
+      }
+      .button-container {
+        // border: 1px solid black;
+        width: 100%;
+        .button {
+          display: flex;
+          justify-content: start;
+          width: 100%;
+          height: 40px;
+          align-items: center;
+          font-size: 17px;
+          margin-top: 10px;
+          border-radius: 6px;
+          border: none;
+          color: $dark-blue-set;
+          font-weight: 500;
+          // background-color: $blue-set;
+          padding-inline-start: 12px;
+          img {
+            width: 18px;
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+    .event-page {
+      padding-top: 20px;
+      height: 718px;
+      flex: 6;
+    }
+    .management-page {
+      padding-top: 20px;
+      height: 718px;
+      flex: 6;
+    }
+    .account-page {
+      // padding-top: 20px;
+      flex: 6;
+      height: 718px;
+      .profile {
+        margin-block: 20px;
+        * {
+          // border: 1px solid black;
+        }
+        display: flex;
+        align-items: center;
+        .profile-picture {
+          width: 70px;
+          height: 70px;
+          // overflow: hidden;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          cursor: pointer;
+          border: 1px solid grey;
+          border-radius: 50px;
+          .picture {
+            width: 55%;
+            height: 55%;
+          }
+          .change-photo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            border-radius: 9px;
+            position: absolute;
+            bottom: 2px;
+            background-color: white;
+            // border: 1px solid black;
+            right: 2px;
+            img {
+              width: 14px;
+            }
+          }
+        }
+        .info {
+          width: 90%;
+          margin-left: 10px;
+          h2 {
+            font-size: 18px;
+          }
+          p {
+            font-size: 13px;
+            color: grey;
+            margin-top: 4px;
+          }
+        }
+      }
+      .fields-container {
+        margin-bottom: 22px;
+        padding-block-end: 26px;
+        width: 80%;
+        border: 1px solid $grey-border-set;
+        border-radius: 4px;
+        padding-inline: 28px;
+        .field {
+          display: flex;
+          width: 100%;
+
+          flex-direction: column;
+          label {
+            margin-top: 16px;
+            color: $dark-blue-set;
+            font-weight: 600;
+            cursor: pointer;
+            img {
+              width: 12px;
+              margin-left: 4px;
+            }
+          }
+          input {
+            background-color: rgb(230, 230, 230);
+            height: 34px;
+            border-radius: 3px;
+            border: none;
+            margin-top: 4px;
+            padding-inline: 10px;
+            &::placeholder {
+              font-size: 14px;
+              color: black;
+            }
+          }
+        }
+        .button-container {
+          margin-top: 20px;
+          display: flex;
+          justify-content: end;
+          button {
+            width: 80px;
+            height: 30px;
+            background-color: $dark-blue-set-2;
+            color: white;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+            &:active {
+              opacity: 30%;
+            }
+          }
+        }
+      }
+      .password-field-container {
+        border: 1px solid $grey-border-set;
+        border-radius: 4px;
+        // height: 110px;
+        padding: 14px;
+        overflow: hidden;
+        padding-block-end: 30px;
+        width: 80%;
+        padding-inline: 28px;
+        transition: 0.6s;
+        display: flex;
+        flex-direction: column;
+        .password-field-main {
+          margin-bottom: 26px;
+          .title-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            .title {
+              display: flex;
+              column-gap: 8px;
+              align-items: center;
+              height: 28px;
+              img {
+              }
+              p {
+                color: $dark-blue-set;
+              }
+            }
+            button {
+              border: 1px solid $dark-blue-set;
+              background-color: white;
+              height: 28px;
+              border-radius: 4px;
+              width: 28px;
+              justify-content: center;
+              img {
+                width: 20px;
+                rotate: 180deg;
+              }
+              &:active {
+                background-color: $light-blue;
+              }
+            }
+          }
+          .current-password-field {
+            display: flex;
+            column-gap: 1%;
+            input {
+              padding-inline: 14px;
+              width: 80%;
+              height: 32px;
+              border-radius: 4px;
+              border: none;
+              border: 1px solid $grey-border-set;
+              background-color: rgb(238, 238, 238);
+            }
+            button {
+              width: 19%;
+              font-size: 13px;
+              background-color: $dark-blue-set-2;
+              border: none;
+
+              border-radius: 4px;
+              color: white;
+              &:active {
+                opacity: 30%;
+              }
+            }
+          }
+        }
+        .password-field {
+          p {
+            margin-top: 16px;
+            color: $dark-blue-set;
+          }
+          input {
+            margin-top: 4px;
+            width: 100%;
+            border-radius: 4px;
+            padding-inline: 10px;
+            font-size: 16px;
+            height: 32px;
+            border: none;
+            border: 1px solid $grey-border-set;
+            background-color: rgb(238, 238, 238);
+          }
+        }
+        .saveChanges {
+          margin-top: 20px;
+          height: 36px;
+          background-color: $dark-blue-set-2;
+          border: none;
+          border-radius: 4px;
+          color: white;
+          font-size: 14px;
+
+          align-self: end;
+          width: 140px;
+          transition: 0.2s;
+          &:active {
+            opacity: 30%;
+          }
+        }
+      }
+    }
+    .blank-page {
+      flex: 6;
+      height: 718px;
+    }
+  }
+}
+
+@media (max-width: 1210px) {
+  .admin-page-container {
+    .admin-page {
+      * {
+      }
+      .sidebar {
+        flex: 3;
+        .profile {
+          img {
+          }
+          p {
+          }
+        }
+        .button-container {
+          button {
+            img {
+            }
+          }
+        }
+      }
+      .account-page {
+        // padding-top: 20px;
+        .profile {
+          .profile-picture {
+            .picture {
+            }
+            .change-photo {
+              img {
+              }
+            }
+          }
+          .info {
+            h2 {
+            }
+            .email {
+            }
+            .role {
+            }
+          }
+        }
+        .fields-container {
+          width: 100%;
+          .field {
+            label {
+              img {
+              }
+            }
+            input {
+              &::placeholder {
+              }
+            }
+          }
+        }
+        .password-field-container {
+          width: 100%;
+          .password-field-main {
+            .title-container {
+              .title {
+                img {
+                }
+                p {
+                }
+              }
+              button {
+                img {
+                }
+                &:active {
+                }
+              }
+            }
+            .current-password-field {
+              input {
+                width: 72%;
+              }
+              button {
+                width: 28%;
+                font-size: 13px;
+                &:active {
+                }
+              }
+            }
+          }
+          .password-field {
+            p {
+            }
+            input {
+            }
+          }
+          .saveChanges {
+            &:active {
+            }
+          }
+        }
+      }
+      .participation-page {
+        height: 1100px;
+      }
+    }
+  }
+}
+@media (max-width: 950px) {
+  .admin-page-container {
+    .admin-page {
+      * {
+      }
+      .sidebar {
+        flex: 3;
+
+        .profile {
+          img {
+          }
+          p {
+          }
+        }
+        .button-container {
+          button {
+            img {
+            }
+          }
+        }
+      }
+      form {
+        .field {
+          label {
+          }
+          input {
+          }
+        }
+      }
+      .participation-page {
+      }
+    }
+  }
+}
+@media (max-width: 750px) {
+  .admin-page-container {
+    padding-inline: 4vw;
+    * {
+      // border: 1px solid black;
+    }
+    .admin-page {
+      flex-direction: column;
+      .sidebar {
+        border-radius: 0px;
+        align-items: center;
+        // padding-top: 0px;
+        flex: 0 1 auto;
+        background-color: $white-set;
+        height: 70px;
+        flex-direction: row;
+        justify-content: end;
+        .logo-jrm {
+          display: none;
+        }
+        .button-container {
+          border: 1px solid $dark-blue-set;
+          border-radius: 5px;
+          padding-inline: 2px;
+          display: flex;
+          width: 40vw;
+          height: 40px;
+          align-items: center;
+          column-gap: 3vw;
+          justify-content: space-between;
+          .button {
+            margin-top: 0px;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+              display: none;
+            }
+            img {
+            }
+          }
+        }
+      }
+      form {
+        .field {
+          label {
+          }
+          input {
+            // width: 98%;
+          }
+        }
+      }
+      .participation-page {
+        flex: 0 1 auto;
+      }
+      .account-page {
+        flex: 0 1 auto;
+      }
+      .blank-page {
+        flex: 0 1 auto;
+      }
+    }
+  }
+}

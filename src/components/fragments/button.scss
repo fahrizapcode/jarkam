@@ -1,0 +1,6 @@
+.back-button {
+  transition: 0.3s;
+  &:active {
+    opacity: 30%;
+  }
+}

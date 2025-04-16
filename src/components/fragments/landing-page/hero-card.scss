@@ -1,0 +1,72 @@
+@use "../../../app/variables" as *;
+.hero-card {
+  width: 724px;
+  height: 410px;
+  background-size: cover;
+  background-position: center;
+  background-position: $blue-set;
+  flex-shrink: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: end;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.04);
+    margin-inline: 10px;
+  }
+  .bottom-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+    opacity: 100%;
+    width: 100%;
+    padding: 12px;
+    color: white;
+    .title {
+      margin-bottom: 8px;
+    }
+    .info-container {
+      display: flex;
+      column-gap: 10px;
+      .info {
+        display: flex;
+        column-gap: 4px;
+        align-items: center;
+
+        img {
+          height: 20px;
+          * {
+            fill: white;
+          }
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 750px) {
+  .hero-card {
+    width: 96vw;
+    height: 54vw;
+    background-size: cover;
+    background-position: center;
+    background-position: $blue-set;
+    flex-shrink: 0;
+    .bottom-caption {
+      .title {
+      }
+      .info-container {
+        div {
+          img {
+            height: 40px;
+          }
+          p {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,7 +10,6 @@ interface ButtonProps {
   buttonColorActive: string;
   height: number;
   fontSize: number;
-  href: string;
 }
 
 export default function Button({
@@ -20,12 +19,10 @@ export default function Button({
   textContent,
   height,
   fontSize,
-  href,
 }: ButtonProps) {
   const [buttonColorState, setButtonColorState] = useState(buttonColor);
   return (
-    <Link
-      href={href}
+    <button
       style={{
         backgroundColor: buttonColorState,
         width: width,
@@ -36,7 +33,9 @@ export default function Button({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        border: "1px solid" + buttonColor,
+        // border: "1px solid" + buttonColor,
+        border: "none",
+        outline: "none",
       }}
       className="button"
       onClick={() => {
@@ -47,6 +46,6 @@ export default function Button({
       }}
     >
       <p style={{ color: "white", fontSize: fontSize }}>{textContent}</p>
-    </Link>
+    </button>
   );
 }
