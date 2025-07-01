@@ -9,6 +9,14 @@ The project is built using **Next.js** for both the **frontend** and **backend (
 
 ---
 
+
+## 🎨 UI/UX Design
+
+- 📄 Figma Design Link: [ZapKode (Jarkam UI)](https://www.figma.com/design/YPBskEyucyZdK8zGOAQGAC/ZapKode?node-id=0-1&p=f&t=5Itk9x2tmQ7jejzg-0)
+
+---
+
+
 ## 🚀 Features
 
 - 📅 Admin can **create**, **edit**, and **delete** student activities
